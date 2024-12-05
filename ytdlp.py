@@ -39,7 +39,7 @@ def download_audio():
             if os.path.exists(file_path):
                 os.remove(file_path)
 
-        return jsonify({'download_url': f'https://4ff74074-19fa-48b7-b131-ff142269f12e-00-li57es0rihlj.sisko.replit.dev/download/{output_filename}'}), 200
+        return jsonify({'download_url': f'https://your_domain_or_IP/download/{output_filename}'}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -50,4 +50,4 @@ def download_file(filename):
 if __name__ == '__main__':
     if not os.path.exists(DOWNLOAD_FOLDER):
         os.makedirs(DOWNLOAD_FOLDER)
-   app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=80)
